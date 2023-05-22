@@ -18,8 +18,8 @@ ThemeData managerLightThemeData() {
     // this for disabled button colors
     disabledColor: ManagerColors.textColor,
     splashColor: ManagerColors.greyLight,
-   // scaffoldBackgroundColor:ManagerColors.background,
-    scaffoldBackgroundColor: ManagerColors.scaffoldBackgroundColorLight,
+     scaffoldBackgroundColor: ManagerColors.scaffoldBackgroundColorLight,
+
 
     /// APP BAR THEME
     appBarTheme: AppBarTheme(
