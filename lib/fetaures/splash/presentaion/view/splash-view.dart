@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/resources/manager-assets.dart';
 import '../../../../core/resources/manager_sizes.dart';
-import '../../../../core/widget/scaffold-width-background.dart';
+import '../../../../core/widget/scaffold-with-background';
 
 
 class SplashView extends StatelessWidget {
