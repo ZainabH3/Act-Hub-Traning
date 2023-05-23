@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import '../resources/manager-assets.dart';
 import '../resources/manager-colors.dart';
 
-
 Widget scaffoldWithBackGroundImage({
   required Widget child,
   Color backgroundColor = ManagerColors.primaryColor,
@@ -15,6 +14,7 @@ Widget scaffoldWithBackGroundImage({
   return willPopScope(
     child: Scaffold(
       backgroundColor: backgroundColor,
+      resizeToAvoidBottomInset: false,
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
