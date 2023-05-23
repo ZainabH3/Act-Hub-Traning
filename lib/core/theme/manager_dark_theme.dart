@@ -5,19 +5,21 @@ import '../../config/constants.dart';
 import '../resources/manager-colors.dart';
 import '../resources/manager_font.dart';
 import '../resources/manager_styles.dart';
+import '../resources/manager_text_theme_dark.dart';
 import '../resources/manager_text_theme_light.dart';
 
 ThemeData managerDarkThemeData() {
   return ThemeData.dark().copyWith(
     useMaterial3: true,
+
+    /// MAIN COLORS APP
     primaryColor: ManagerColors.primaryColor,
-    primaryColorLight: ManagerColors.primaryColorLight,
+    primaryColorDark: ManagerColors.primaryColorDark,
 
     // this for disabled button colors
     disabledColor: ManagerColors.textColor,
     splashColor: ManagerColors.greyLight,
     scaffoldBackgroundColor: ManagerColors.scaffoldBackgroundColorDark,
-
 
     /// APP BAR THEME
     appBarTheme: AppBarTheme(
@@ -34,9 +36,9 @@ ThemeData managerDarkThemeData() {
     buttonTheme: const ButtonThemeData(
       shape: RoundedRectangleBorder(),
       disabledColor: ManagerColors.greyLight,
-      buttonColor: ManagerColors.buttonColorLight,
+      buttonColor: ManagerColors.buttonColorDarK,
     ),
 
-    textTheme: ManagerTextThemeLight(),
+    textTheme: ManagerTextThemeDark(),
   );
 }
