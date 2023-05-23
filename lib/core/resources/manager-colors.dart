@@ -30,5 +30,7 @@ class ManagerColors {
   static const Color searchColor = Color(0xffADADAD);
   static const Color descriptionColor = Color(0xff6A7F84);
   static const Color scaffoldBackgroundColorLight = Colors.white;
+  static const Color scaffoldBackgroundColorDark = Colors.black;
+
 
 }
