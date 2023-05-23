@@ -1,12 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../config/constants.dart';
 import '../resources/manager-colors.dart';
-import '../resources/manager_font.dart';
 import '../resources/manager_sizes.dart';
-import '../resources/manager_strings.dart';
-import '../resources/manager_styles.dart';
+
+
 
 Widget mainButton({
   required Widget child,

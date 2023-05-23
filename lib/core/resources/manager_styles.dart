@@ -55,7 +55,7 @@ TextStyle getMediumTextStyle({
   return _textStyle(
     fontSize: fontSize,
     fontFamily: ManagerFontFamily.fontFamily,
-    fontWeight: ManagerFontWeight.medium,
+    fontWeight:ManagerFontWeight.medium,
     color: color,
     decoration: decoration,
   );
@@ -70,7 +70,7 @@ TextStyle getTextStyle({
   return _textStyle(
     fontSize: fontSize,
     fontFamily: ManagerFontFamily.fontFamily,
-    fontWeight: weight ?? ManagerFontWeight.medium,
+    fontWeight: weight ??ManagerFontWeight.medium,
     color: color,
     decoration: decoration,
   );
