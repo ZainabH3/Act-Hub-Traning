@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 
 import '../config/dependency-injection.dart';
 import '../core/resources/manager_strings.dart';
+import '../features/out_boarding/presentation/view/out_boarding_view.dart';
+import '../features/splash/presentation/view/splash_view.dart';
 
-import '../fetaures/out-boarding-view/out-boarding-view.dart';
-import '../fetaures/splash/presentaion/view/splash-view.dart';
+
 
 
 

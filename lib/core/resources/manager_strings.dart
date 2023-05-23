@@ -2,16 +2,20 @@ class ManagerStrings {
   static const String noRouteFound = 'No Route Found';
   static const String actHub = 'Act-Hub';
   static const String logoutFailed = 'Logout Failed';
+  static const String noRoutFound = 'No Rout Found';
+  static const String skip = 'Skip';
+
+  static const String outBoardingSubTitle1 =
+      'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 1.';
+  static const String outBoardingSubTitle2 =
+      'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 2.';
+  static const String outBoardingSubTitle3 =
+      'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 3.';
+  static const String getStartButton = 'Let\'s get started';
   static const String outBoardingView = 'Out Boarding View';
   static const String outBoardingTitle1 = 'Find your cozy working space';
   static const String outBoardingTitle2 = 'Find your cozy working space';
   static const String outBoardingTitle3 = 'Find your cozy working space';
-  static const String outBoardingSubTitle1 =
-      'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.';
-  static const String outBoardingSubTitle2 =
-      'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.';
-  static const String outBoardingSubTitle3 =
-      'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.';
   static const String login = 'Login';
   static const String signUp = 'Sign Up';
   static const String email = "Email";
@@ -53,7 +57,7 @@ class ManagerStrings {
   static const String search = "Search";
   static const String hintSearch = "Try Search for Courses, or Categories";
   static const String confirmPass = "Confirm Password";
-  static const String skip = 'Skip';
+
   static const String saved = 'Saved';
   static const String uiuxDesign = 'UI / UX Design';
   static const String hourTraining = '45 hour training';
