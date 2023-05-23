@@ -10,6 +10,8 @@ class ManagerFontWeight {
   static const FontWeight regular = FontWeight.w400;
   static const FontWeight medium = FontWeight.w500;
   static const FontWeight bold = FontWeight.w700;
+  static const FontWeight w200 = FontWeight.w200;
+  static const FontWeight w300 = FontWeight.w300;
 }
 
 class ManagerFontSize {
@@ -34,4 +36,6 @@ class ManagerFontSize {
   static  double s40 = SizeUtil.setFontSize(40.0);
   static  double s80 = SizeUtil.setFontSize(80.0);
   static  double s100 = SizeUtil.setFontSize(100.0);
+  static  double s34 = SizeUtil.setFontSize(34.0);
+
 }
