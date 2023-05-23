@@ -10,7 +10,6 @@ import 'core/service/theme-service.dart';
 void main() {
   runApp(MyApp());
 }
-
 class MyApp extends StatelessWidget {
   final ThemeService _themeService;
 
