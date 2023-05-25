@@ -27,7 +27,7 @@ class OutBoardingView extends StatelessWidget {
             return Column(
               children: [
                 Visibility(
-                  visible: controller.isLasedPage(),
+                  visible: controller.isNotLastedPage(),
                   maintainSize: true,
                   maintainState: true,
                   maintainAnimation: true,
@@ -59,7 +59,7 @@ class OutBoardingView extends StatelessWidget {
                   ),
                 ),
                 Visibility(
-                  visible: controller.isLasedPage(),
+                  visible: controller.isNotLastedPage(),
                   replacement: mainButton(
                       child: Text(
                         ManagerStrings.getStartButton,
@@ -78,7 +78,7 @@ class OutBoardingView extends StatelessWidget {
                         visible: controller.showBackButton(),
                         child: mainButton(
                           onPressed: () {
-                            controller.nextPage();
+                            controller.previousPage();
                           },
                           child: const Icon(
                             Icons.arrow_back_outlined,
