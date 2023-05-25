@@ -21,6 +21,11 @@ initModule() async {
 
   instance.registerLazySingleton<AppSettingSharedPreferences>(
           () => AppSettingSharedPreferences(instance()));
+
+  // TODO: ONLY FOR TEST
+  // AppSettingsSharedPreferences appSettingsSharedPreferences =
+  //     instance<AppSettingsSharedPreferences>();
+  // appSettingsSharedPreferences.clear();
 }
 
 initSplash() {
