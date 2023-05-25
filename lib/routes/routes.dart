@@ -10,9 +10,6 @@ import '../features/splash/presentation/view/splash_view.dart';
 
 
 
-
-
-
 class Routes {
   static const String splashView = '/splash_view';
   static const String outBoardingView = '/out_boarding_view';
@@ -29,7 +26,7 @@ class RouteGenerator {
         initOutBoarding();
         return MaterialPageRoute(builder: (_) => const OutBoardingView());
       case Routes.loginView:
-        return MaterialPageRoute(builder: (_) =>  const LoginView());
+        return MaterialPageRoute(builder: (_) => const LoginView());
       default:
         return unDefinedRoute();
     }
@@ -39,10 +36,10 @@ class RouteGenerator {
     return MaterialPageRoute(
       builder: (_) => Scaffold(
         appBar: AppBar(
-          title:  const Text(ManagerStrings.noRouteFound),
+          title: const Text(ManagerStrings.noRoutFound),
         ),
         body: const Center(
-          child: Text(ManagerStrings.noRouteFound),
+          child: Text(ManagerStrings.noRoutFound),
         ),
       ),
     );

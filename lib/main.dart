@@ -8,8 +8,8 @@ import 'config/constants.dart';
 import 'config/dependency-injection.dart';
 import 'core/service/theme-service.dart';
 
-void main() {
-  initModule();
+void main() async {
+  await initModule();
   runApp(MyApp());
 }
 class MyApp extends StatelessWidget {
