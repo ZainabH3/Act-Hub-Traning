@@ -1,4 +1,5 @@
 
+import 'package:act_hub_training/features/auth/presentation/view/login-view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,12 +10,10 @@ import '../features/splash/presentation/view/splash_view.dart';
 
 
 
-
-
-
 class Routes {
   static const String splashView = '/splash_view';
   static const String outBoardingView = '/out_boarding_view';
+  static const String loginView = '/login_view';
 }
 
 class RouteGenerator {
@@ -26,6 +25,8 @@ class RouteGenerator {
       case Routes.outBoardingView:
         initOutBoarding();
         return MaterialPageRoute(builder: (_) => const OutBoardingView());
+      case Routes.loginView:
+        return MaterialPageRoute(builder: (_) => const LoginView());
       default:
         return unDefinedRoute();
     }
@@ -35,10 +36,10 @@ class RouteGenerator {
     return MaterialPageRoute(
       builder: (_) => Scaffold(
         appBar: AppBar(
-          title:  const Text(ManagerStrings.noRouteFound),
+          title: const Text(ManagerStrings.noRoutFound),
         ),
         body: const Center(
-          child: Text(ManagerStrings.noRouteFound),
+          child: Text(ManagerStrings.noRoutFound),
         ),
       ),
     );

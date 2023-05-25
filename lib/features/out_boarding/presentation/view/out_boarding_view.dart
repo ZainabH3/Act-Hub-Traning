@@ -1,4 +1,5 @@
 
+import 'package:act_hub_training/features/out_boarding/presentation/view/widget/circle_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../core/resources/manager-colors.dart';
@@ -61,47 +62,40 @@ class OutBoardingView extends StatelessWidget {
                 Visibility(
                   visible: controller.isNotLastedPage(),
                   replacement: mainButton(
-                      child: Text(
-                        ManagerStrings.getStartButton,
-                        style: getRegularTextStyle(
-                          fontSize: ManagerFontSize.s14,
-                          color: ManagerColors.white,
-                        ),
+                    onPressed: (){
+                      controller.getStart();
+                    },
+                    child: Text(
+                      ManagerStrings.getStartButton,
+                      style: getRegularTextStyle(
+                        fontSize: ManagerFontSize.s14,
+                        color: ManagerColors.white,
                       ),
-                      minWidth: double.infinity,
-                      height: ManagerHeight.h40,
-                      color: ManagerColors.primaryColor),
+                    ),
+                    minWidth: double.infinity,
+                    height: ManagerHeight.h40,
+                    color: ManagerColors.primaryColor,
+                  ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+
+
+
                       Visibility(
                         visible: controller.showBackButton(),
-                        child: mainButton(
+                        child: circleButton(
                           onPressed: () {
                             controller.previousPage();
                           },
-                          child: const Icon(
-                            Icons.arrow_back_outlined,
-                            color: ManagerColors.iconColor,
-                          ),
-                          shapeBorder: const CircleBorder(),
-                          minWidth: ManagerWidth.w50,
-                          height: ManagerHeight.h50,
-                          color: ManagerColors.primaryColor,
+                          iconData: Icons.arrow_back_outlined,
                         ),
                       ),
-                      mainButton(
+                      circleButton(
                         onPressed: () {
                           controller.nextPage();
                         },
-                        child: const Icon(
-                          Icons.arrow_forward_outlined,
-                          color: ManagerColors.iconColor,
-                        ),
-                        shapeBorder: const CircleBorder(),
-                        minWidth: ManagerWidth.w50,
-                        height: ManagerHeight.h50,
-                        color: ManagerColors.primaryColor,
+                        iconData: Icons.arrow_forward_outlined,
                       ),
                     ],
                   ),

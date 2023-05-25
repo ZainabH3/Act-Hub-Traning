@@ -5,9 +5,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import 'config/constants.dart';
+import 'config/dependency-injection.dart';
 import 'core/service/theme-service.dart';
 
-void main() {
+void main() async {
+  await initModule();
   runApp(MyApp());
 }
 class MyApp extends StatelessWidget {

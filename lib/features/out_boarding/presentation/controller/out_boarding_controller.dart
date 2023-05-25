@@ -1,6 +1,8 @@
 import 'dart:core';
 
 
+import 'package:act_hub_training/config/dependency-injection.dart';
+import 'package:act_hub_training/core/storage/local/app-settings-shared-preferences.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
@@ -8,9 +10,14 @@ import '../../../../config/constants.dart';
 import '../../../../core/resources/manager-assets.dart';
 
 import '../../../../core/resources/manager_strings.dart';
+import '../../../../routes/routes.dart';
 import '../view/widget/out_boarding_item.dart';
 
 class OutBoardingController extends GetxController {
+
+  final AppSettingSharedPreferences _appSettingSharedPreferences = instance <AppSettingSharedPreferences>();
+
+
   late PageController pageController;
   static const firstPage = 0;
   static const lastPage = 2;
@@ -46,10 +53,14 @@ class OutBoardingController extends GetxController {
     super.onClose();
   }
 
-  void setCurrentPage(int index) {
+
+  Future<void> setCurrentPage(int index) async {
+    await _appSettingSharedPreferences.setOutBoardingViewed();
     currentPage = index;
     update();
   }
+
+
 
   void skipPage() {
     animateToPage(index: lastPage);
@@ -62,6 +73,10 @@ class OutBoardingController extends GetxController {
       animateToPage(index: ++currentPage);
       update();
     }
+  }
+  Future<void> getStart() async {
+    await  _appSettingSharedPreferences.setOutBoardingViewed();
+    Get.offAllNamed(Routes.loginView);
   }
 
   void previousPage() {
