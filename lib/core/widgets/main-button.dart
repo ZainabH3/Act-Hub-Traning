@@ -1,3 +1,4 @@
+import 'package:act_hub_training/core/extensions/extensions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../config/constants.dart';
@@ -23,10 +24,10 @@ Widget mainButton({
             ManagerRadius.r12,
           ),
         ),
-    color: color ?? ManagerColors.transparent,
-    minWidth: minWidth ?? ManagerWidth.w16,
-    height: height ?? ManagerHeight.h16,
-    elevation: elevation ?? Constants.elevationButton,
+    color: color.onNull(),
+    minWidth: minWidth.onNull(),
+    height: height.onNull(),
+    elevation: elevation.onNull(),
     child: child,
   );
 }
