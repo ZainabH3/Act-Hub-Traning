@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       splitScreenMode: true,
+
       minTextAdapt: true,
       designSize: const Size(
         Constants.deviceWidth,
