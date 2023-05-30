@@ -4,8 +4,10 @@ import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:get_it/get_it.dart';
+import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../core/internet_checker/internet_checker.dart';
 import '../core/network/app-api.dart';
 import '../core/network/doi-factory.dart';
 import '../features/out_boarding/presentation/controller/out_boarding_controller.dart';
@@ -37,6 +39,8 @@ initModule() async {
   instance.registerLazySingleton<AppApi>(() => AppApi(dio));
 
 
+  instance.registerLazySingleton<NetworkInfo>(
+          () => NetworkInfoImpl(InternetConnectionCheckerPlus()));
 }
 
 initSplash() {
