@@ -22,6 +22,16 @@ extension NonNullDouble on double? {
   }
 }
 
+extension NonNullInt on int? {
+  int onNull() {
+    if (this == null) {
+      return 0;
+    } else {
+      return this!;
+    }
+  }
+}
+
 extension NonNullBoolean on bool? {
   bool onNull() {
     if (this == null) {
