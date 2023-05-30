@@ -6,7 +6,7 @@ import '../../../config/constants.dart';
 class AppSettingSharedPreferences{
 
 
-  late final SharedPreferences _sharedPreferences;
+   final SharedPreferences _sharedPreferences;
   AppSettingSharedPreferences (this._sharedPreferences);
 
   Future<void> setOutBoardingViewed() async {
@@ -16,13 +16,21 @@ class AppSettingSharedPreferences{
     );
   }
 
-  bool getOutBoardingViewed() {
-    return _sharedPreferences
-        .getBool(
-      ConstantsPrefsKeys.outBoardingViewedKey,
-    )
-        .onNull();
+   bool getOutBoardingViewed() {
+     return _sharedPreferences
+         .getBool(
+       ConstantsPrefsKeys.outBoardingViewedKey,
+     )
+         .onNull();
+   }
+  Future<void> setToken(String token) async {
+    await _sharedPreferences.setString(Constants.tokenKey, token);
   }
+  String getToken() {
+    return _sharedPreferences.getString(Constants.tokenKey).onNull();
+  }
+
+
 
   void clear(){
     _sharedPreferences.clear();

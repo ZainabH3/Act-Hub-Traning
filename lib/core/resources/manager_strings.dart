@@ -4,7 +4,7 @@ class ManagerStrings {
   static const String logoutFailed = 'Logout Failed';
   static const String noRoutFound = 'No Rout Found';
   static const String skip = 'Skip';
-
+ static const String   noInternetConnection  = '  No Internet Connection ';
   static const String outBoardingSubTitle1 =
       'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 1.';
   static const String outBoardingSubTitle2 =
