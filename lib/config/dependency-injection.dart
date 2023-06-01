@@ -1,4 +1,3 @@
-
 import 'package:act_hub_training/core/storage/local/app-settings-shared-preferences.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
@@ -10,6 +9,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../core/internet_checker/internet_checker.dart';
 import '../core/network/app-api.dart';
 import '../core/network/doi-factory.dart';
+import '../features/auth/data/data_source/remote-data-source.dart';
+import '../features/auth/data/repository_impl/login_repository_impl.dart';
+import '../features/auth/domain/repository/login_repository.dart';
+import '../features/auth/domain/use-case/login-use-case.dart';
 import '../features/out_boarding/presentation/controller/out_boarding_controller.dart';
 import '../features/splash/presentation/controller/splash_controller.dart';
 
@@ -59,3 +62,32 @@ initOutBoarding() {
 disposeOutBoarding() {
   Get.delete<OutBoardingController>();
 }
+
+initLoginModule() {
+  if (!GetIt.I.isRegistered<RemoteLoginDataSource>()) {
+    instance.registerLazySingleton<RemoteLoginDataSource>(
+          () =>
+          RemoteLoginDataSourceImplement(
+            instance<AppApi>(),
+          ),
+    );
+  }
+
+  if (!GetIt.I.isRegistered<LoginRepository>()) {
+    instance.registerLazySingleton<LoginRepository>(
+          () =>
+          LoginRepositoryImpl(
+            instance(),
+            instance(),
+          ),
+    );
+  }
+
+  if (!GetIt.I.isRegistered<LoginUseCase>()) {
+    instance.registerFactory<LoginUseCase>(
+          () =>
+          LoginUseCase(
+            instance<LoginRepository>(),
+          ),
+    );
+  }
