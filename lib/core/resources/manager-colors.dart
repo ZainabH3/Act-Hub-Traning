@@ -37,4 +37,5 @@ class ManagerColors {
   static const Color transparent =  Colors.transparent;
   static const Color iconColor =  Colors.white;
 
+
 }
