@@ -38,4 +38,5 @@ class ManagerFontSize {
   static  double s100 = SizeUtil.setFontSize(100.0);
   static  double s34 = SizeUtil.setFontSize(34.0);
 
+
 }
