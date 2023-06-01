@@ -5,7 +5,7 @@ class ManagerColors {
   static const Color black = Colors.black;
   static const Color textColor = Color(0xFF072A33);
   static const Color textColorLight = Color(0xff525167);
-  static const Color textColorDark =Colors.white;
+  static const Color textColorDark = Colors.white;
   static const Color subTitleColor = Color(0xff839499);
   static const Color primaryColor = Color(0xffFFB300);
   static const Color borderSide=Color(0xff1A1919);
@@ -31,11 +31,8 @@ class ManagerColors {
   static const Color searchColor = Color(0xffADADAD);
   static const Color descriptionColor = Color(0xff6A7F84);
   static const Color scaffoldBackgroundColorLight = Colors.white;
-  static const Color scaffoldBackgroundColorDark = Colors.black;
-  static const ColordisabledColor = Colors.grey;
+  static const Color scaffoldBackgroundColorDark =  Colors.black;
   static const Color disabledColor =  Colors.grey;
   static const Color transparent =  Colors.transparent;
   static const Color iconColor =  Colors.white;
-
-
 }

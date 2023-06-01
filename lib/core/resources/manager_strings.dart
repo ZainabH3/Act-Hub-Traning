@@ -150,4 +150,9 @@ class ManagerStrings {
   static const String NO_INTERNT_CONNECTION =
       "No Internet Connection, Try Again Later";
   static const String UNKNOWN = "UnKnown, Try Again Later";
+
+  static const String bearer = 'Bearer';
+
+
+  static const String invalidPassword = 'Invalid Password';
 }
