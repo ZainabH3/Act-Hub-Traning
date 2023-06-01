@@ -13,6 +13,7 @@ import '../features/auth/data/data_source/remote-data-source.dart';
 import '../features/auth/data/repository_impl/login_repository_impl.dart';
 import '../features/auth/domain/repository/login_repository.dart';
 import '../features/auth/domain/use-case/login-use-case.dart';
+import '../features/auth/presentation/ controller/login-controller.dart';
 import '../features/out_boarding/presentation/controller/out_boarding_controller.dart';
 import '../features/splash/presentation/controller/splash_controller.dart';
 
@@ -21,14 +22,14 @@ final instance = GetIt.instance;
 initModule() async {
   WidgetsFlutterBinding.ensureInitialized();
   final SharedPreferences sharedPreferences =
-  await SharedPreferences.getInstance();
+      await SharedPreferences.getInstance();
 
   instance.registerLazySingleton<SharedPreferences>(
-        () => sharedPreferences,
+    () => sharedPreferences,
   );
 
   instance.registerLazySingleton<AppSettingSharedPreferences>(
-          () => AppSettingSharedPreferences(instance()));
+      () => AppSettingSharedPreferences(instance()));
 
   // TODO: ONLY FOR TEST
   // AppSettingsSharedPreferences appSettingsSharedPreferences =
@@ -39,11 +40,15 @@ initModule() async {
 
   Dio dio = await instance<DioFactory>().getDio();
 
-  instance.registerLazySingleton<AppApi>(() => AppApi(dio));
-
+  instance.registerLazySingleton<AppApi>(
+    () => AppApi(dio),
+  );
 
   instance.registerLazySingleton<NetworkInfo>(
-          () => NetworkInfoImpl(InternetConnectionCheckerPlus()));
+    () => NetworkInfoImpl(
+      InternetConnectionCheckerPlus(),
+    ),
+  );
 }
 
 initSplash() {
@@ -66,28 +71,28 @@ disposeOutBoarding() {
 initLoginModule() {
   if (!GetIt.I.isRegistered<RemoteLoginDataSource>()) {
     instance.registerLazySingleton<RemoteLoginDataSource>(
-          () =>
-          RemoteLoginDataSourceImplement(
-            instance<AppApi>(),
-          ),
+      () => RemoteLoginDataSourceImplement(
+        instance<AppApi>(),
+      ),
     );
   }
 
   if (!GetIt.I.isRegistered<LoginRepository>()) {
     instance.registerLazySingleton<LoginRepository>(
-          () =>
-          LoginRepositoryImpl(
-            instance(),
-            instance(),
-          ),
+      () => LoginRepositoryImpl(
+        instance(),
+        instance(),
+      ),
     );
   }
 
   if (!GetIt.I.isRegistered<LoginUseCase>()) {
     instance.registerFactory<LoginUseCase>(
-          () =>
-          LoginUseCase(
-            instance<LoginRepository>(),
-          ),
+      () => LoginUseCase(
+        instance<LoginRepository>(),
+      ),
     );
   }
+
+  Get.put<LoginController>(LoginController());
+}
