@@ -1,4 +1,3 @@
-
 import 'package:act_hub_training/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -12,9 +11,9 @@ void main() async {
   await initModule();
   runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
   final ThemeService _themeService;
-
 
   MyApp({super.key}) : _themeService = ThemeService();
 
@@ -22,7 +21,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       splitScreenMode: true,
-
       minTextAdapt: true,
       designSize: const Size(
         Constants.deviceWidth,
