@@ -7,12 +7,16 @@ class Constants {
   static const double elevationAppBar = 0;
   static const double elevationButton = 0;
   static const int sliderItems = 3;
+  static const int loginFirstPartFlex = 1;
+  static const int loginSecondPartFlex = 3;
   static const String tokenKey = 'tokenKey';
   static const String outBoardingViewedKey = 'out_boarding_viewed';
+
 }
 class ConstantsPrefsKeys {
   static const String outBoardingViewedKey = 'out_boarding_viewed';
   static const String token = 'token';
+ // static const String loginFirstPartFlex = 'login_FirstPartFlex';
 }
 
 
