@@ -153,6 +153,5 @@ class ManagerStrings {
 
   static const String bearer = 'Bearer';
 
-
   static const String invalidPassword = 'Invalid Password';
 }
