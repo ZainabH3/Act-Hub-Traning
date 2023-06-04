@@ -11,6 +11,7 @@ class Constants {
   static const int loginSecondPartFlex = 3;
   static const String tokenKey = 'tokenKey';
   static const String outBoardingViewedKey = 'out_boarding_viewed';
+  static const double getStateWidgetRenderStateElevation = 3;
 
 }
 class ConstantsPrefsKeys {
