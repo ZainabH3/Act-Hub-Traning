@@ -7,8 +7,8 @@ import '../../config/constants.dart';
 import '../../config/dependency-injection.dart';
 
 class DioFactory {
-  final AppSettingSharedPreferences _appSettingsPreferences =
-  instance<AppSettingSharedPreferences>();
+  final AppSettingsSharedPreferences _appSettingsPreferences =
+  instance<AppSettingsSharedPreferences>();
 
   Future<Dio> getDio() async {
     Dio dio = Dio();
