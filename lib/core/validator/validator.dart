@@ -30,4 +30,24 @@ class FailedValidator {
 
     return null;
   }
+
+  String? validateFullName(String? fullName) {
+    if (fullName!.isEmpty) {
+      return ManagerStrings.requiredFullName;
+    }
+
+    return null;
+  }
+
+  String? validatePhone(String? phone) {
+    if (phone!.isEmpty) {
+      return ManagerStrings.requiredPhone;
+    }
+
+    if (!GetUtils.isPhoneNumber(phone)) {
+      return ManagerStrings.invalidEmail;
+    }
+
+    return null;
+  }
 }
