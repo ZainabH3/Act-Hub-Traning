@@ -33,6 +33,7 @@ class LoginRepositoryImpl implements LoginRepository {
         Failure(
           ResponseCode.NO_INTERNET_CONNECTION.value,
           ApiConstants.noInternetConnection,
+
         ),
       );
     }
