@@ -4,7 +4,7 @@ class ManagerStrings {
   static const String logoutFailed = 'Logout Failed';
   static const String noRoutFound = 'No Rout Found';
   static const String skip = 'Skip';
- static const String   noInternetConnection  = '  No Internet Connection ';
+  static const String noInternetConnection = '  No Internet Connection ';
   static const String outBoardingSubTitle1 =
       'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 1.';
   static const String outBoardingSubTitle2 =
@@ -151,12 +151,17 @@ class ManagerStrings {
       "No Internet Connection, Try Again Later";
   static const String UNKNOWN = "UnKnown, Try Again Later";
   static const String bearer = 'Bearer';
-  static const String  requiredPhone = ' Required Phone';
-  static const String requiredFullName= 'Required Full Name';
+  static const String requiredPhone = ' Required Phone';
+  static const String requiredFullName = 'Required Full Name';
 
   static const String invalidPassword = 'Invalid Password';
   static const String confirmPassword = 'Confirm Password';
   static const String agreePolicy = 'Agree Policy';
   static const String haveAccount = 'Have Account';
   static const String phone = 'phone';
+  static const String signIn = 'Sign In';
+  static const String forgotPassword = 'Forgot Password ?';
+  static const String haveNotAccount = 'haveNotAccount ';
+
+  static const String shouldAgreePolicies = 'Should Agree Terms and Policies';
 }
