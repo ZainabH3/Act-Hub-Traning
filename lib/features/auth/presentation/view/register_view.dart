@@ -74,6 +74,10 @@ class RegisterView extends StatelessWidget {
                       value,
                     ),
                   ),
+
+
+
+
                   SizedBox(height: ManagerHeight.h16),
                   baseTextFormField(
                     controller: controller.confirmPassword,
